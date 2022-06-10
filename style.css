@@ -13,6 +13,10 @@ body{
     width: 100%;
     background-color: rgb(231, 231, 231);
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -69,7 +73,7 @@ body{
 .home{
     display: flex;
     width: 100vw;
-    /* background: url(image/banner.png) no-repeat; */
+    background: url(image/banner.jpg) no-repeat;
     background-color: #111;
     background-size: cover;
     height: 100vh;
@@ -176,11 +180,11 @@ section .title::after{
     padding: 5px;
     transform: translateX(-50%);
 }
-.about, .services, .skills, .projects, .contact, footer{
+.about, .social-networks, .skills, .projects, .contact, footer{
     font-family: 'Roboto', sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.social-networks .social-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -237,56 +241,54 @@ section .title::after{
     object-fit: cover;
     border-radius: 6px;
 }
-/*  sessão serviços */
-.services, .projects{
+/*  sessão Redes Sociais */
+.social-networks, .projects{
     background: #111;
+    background: url(image/fundo.jpg) no-repeat;
     color: #fff;
 }
-/* .services .title::before,
-.projects .title::before{
-    background: #fff;
-} */
-.services .title::after,
+
+.social-networks .title::after,
 .projects .title::after{
-    background: #111;
-    content: "- Que oferecemos -";
+    background: none;
+    content: "- Minhas Redes -";
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
+.social-networks .social-content .card{
+    width: calc(33% - 70px);
+    background: rgba(34, 34, 34, 0.562);
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.social-networks .social-content .card:hover{
     background: #008d7a;
 }
-.services .serv-content .card .box{
+.social-networks .social-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.social-networks .social-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card ion-icon{
-    font-size: 70px;
+.social-networks .social-content .card ion-icon{
+    font-size: 100px;
     color: #008d7a;
 }
-.services .serv-content .card:hover ion-icon{
+.social-networks .social-content .card:hover ion-icon{
     color: #fff;
 }
-.services .serv-content .card .text{
+.social-networks .social-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-/*  sessão especialidades  */
+/*  sessão Habilidades  */
 .skills{
     background: rgb(231, 231, 231);
 }
 .skills .title::after{
-    content: "Que faço";
+    content: "Skills";
     background: rgb(231, 231, 231);
 }
 .skills .skills-content .column{
@@ -357,12 +359,12 @@ section .title::after{
 .skills .skills-content .right .mysql::before{
     width: 42%;
 }
-/*  sessão projetos  */
+/*  sessão Portifolio  */
 .projects .title::after{
     content: "- Principais Projetos -";   
 }
 .projects .carousel .card{
-    background: #222;
+    background: rgba(34, 34, 34, 0.562);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -544,7 +546,7 @@ footer span a:hover{
     .contact .title::after{
         content: none;
     }
-    .services .title::after,
+    .social-networks .title::after,
     .projects .title::after{
         content: none;
     }
@@ -553,6 +555,14 @@ footer span a:hover{
     }
     .skills .title::after{
         content: none;
+    }
+    .social-networks .social-content .card {
+        width: calc(30% - 10px);
+        margin-bottom: 20px;
+    }
+    .social-networks .social-content .card ion-icon{
+        font-size: 50px;
+        
     }
 }
 @media (max-width: 1104px){
@@ -618,10 +628,6 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100vw;
@@ -641,7 +647,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card {
+    .social-networks .social-content .card {
         width:100vw;
     }
 }
